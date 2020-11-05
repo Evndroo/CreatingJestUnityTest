@@ -12,6 +12,9 @@ class Carro{
     }
 
     acelerar(quantidade){
+        if(typeof quantidade !== "number"){
+            throw new Error("A quantidade a ser acelerada deve ser um número")
+        }
         this._velocidade += quantidade
     }
 
